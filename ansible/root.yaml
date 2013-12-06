@@ -4,3 +4,6 @@
   tasks:
     - yum:
         name: git
+    - yum:
+        name: aws-cli
+
