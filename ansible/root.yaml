@@ -6,4 +6,7 @@
         name: git
     - yum:
         name: aws-cli
+    - yum:
+        name: "*"
+        state: latest
 
