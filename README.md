@@ -1,4 +1,4 @@
-planet-tempura
-==============
+# Planet Tempura
 
-A planet for Japanese who blog about software development in English
+Planet Tempura is a planet for Japanese who blog about
+software development in English.
