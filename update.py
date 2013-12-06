@@ -9,4 +9,5 @@ subprocess.call([ 'python',
 subprocess.call([ 'python',
                   'aws', 's3', 'sync',
                   '--region', 'us-east-1',
+                  '--acl', 'public-read',
                   'public/', 's3://tempura.8-p.info/' ])
