@@ -1,0 +1,58 @@
+html {
+    background: #ecf0f1;
+    color: #333;
+}
+
+header {
+    background: #7f8c8d;
+    overflow: hidden;
+    color: #fff;
+    padding: 2em 0;
+}
+header h1 {
+    margin: 0;
+}
+header a {
+    color: #fff;
+}
+header p {
+    margin: 0;
+    font-size: 80%;
+}
+
+.container {
+    padding: 0 1em;
+}
+
+.day-group {
+    margin-bottom: 1em;
+}
+
+.channel-group {
+    background: #fff;
+
+    box-shadow: rgba(0, 0, 0, .15) 0 0 5px;
+
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.channel-title {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.channel-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.entry-group {
+    border-top: 1px solid #eee;
+    margin-bottom: 1em;
+}
+
+.date a {
+    color: #333;
+    text-decoration: none;
+    font-size: 80%;
+}

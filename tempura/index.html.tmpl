@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet"
+        href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css" />
+  <link rel="stylesheet"
+        href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+  <link rel="stylesheet" href="planet.css" />
+
+  <meta charset="UTF-8">
+  <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
+  <title><TMPL_VAR name></title>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Planet Tempura</h1>
+    <p>
+      A planet for Japanese who blog about software development in English,
+      not <a href="http://en.wikipedia.org/wiki/J%C5%8Dy%C5%8D_kanji">2,136 Kanji characters</a> with Hiragana and Katakana.
+    </p>
+  </div>
+</header>
+
+<div class="pure-g-r">
+  <div class="pure-u-2-3">
+    <div class="container">
+      <TMPL_LOOP Items>
+
+        <TMPL_IF new_date>
+          <TMPL_UNLESS __FIRST__>
+            <!-- close .channel-group and .day-group -->
+            </div></div>
+          </TMPL_UNLESS>
+
+          <div class="day-group">
+            <h2 class="day-title">
+              <i class="fa fa-calendar"></i>
+              <TMPL_VAR new_date>
+            </h2>
+        </TMPL_IF>
+
+        <TMPL_IF new_channel>
+          <TMPL_UNLESS new_date>
+            <!-- close .channel-group -->
+            </div>
+          </TMPL_UNLESS>
+          <div class="channel-group">
+            <div class="channel-title"><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></div>
+        </TMPL_IF>
+
+        <div class="entry-group" id="<TMPL_VAR id>"<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"</TMPL_IF>>
+          <TMPL_IF title>
+            <h4<TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
+          </TMPL_IF>
+          <div class="entry">
+            <div class="content"<TMPL_IF content_language> lang="<TMPL_VAR content_language>"</TMPL_IF>>
+              <TMPL_VAR content>
+            </div>
+
+            <div class="date">
+              <a href="<TMPL_VAR link ESCAPE=HTML>"><TMPL_VAR date></a>
+            </div>
+          </div>
+        </div>
+
+        <TMPL_IF __LAST__>
+          <!-- close .channel-group and .day-group -->
+          </div></div>
+        </TMPL_IF>
+      </TMPL_LOOP>
+  </div><!-- .container -->
+</div><!-- .pure-u-* -->
+
+<div class="pure-u-1-3">
+  <aside class="container">
+    <h2><i class="fa fa-rss"></i> Subscriptions</h2>
+    <ul>
+      <TMPL_LOOP Channels>
+        <li>
+          <a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+        </li>
+      </TMPL_LOOP>
+    </ul>
+
+    <h2><i class="fa fa-github"></i> Can you add my blog?</h2>
+    <p>
+      Sure! Please open a pull request on
+      <a href="http://example.com/tbd">kzys/planet-tempura</a>.
+    </p>
+    <p>
+      In addition, you don't have to worry about if your Atom/RSS feed
+      contains both English and Japanese.
+      Our software can filter out Japanese posts
+      <a href="http://xkcd.com/1171/">correctly</a>.
+    </p>
+  </aside>
+</div>
+</div>
+</body>
+
+</html>
