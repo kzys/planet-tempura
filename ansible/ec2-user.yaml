@@ -1,0 +1,13 @@
+- hosts: cron-scheduler
+  user: ec2-user
+  tasks:
+    - git:
+        repo: https://github.com/rubys/venus.git
+        dest: /home/ec2-user/src/venus
+    - git:
+        repo: https://github.com/kzys/planet-tempura.git
+        dest: /home/ec2-user/src/planet-tempura
+    - cron:
+        name: venus
+        minute: 0,10,20,30,40,50
+        job: /home/ec2-user/src/planet-tempura/update.py

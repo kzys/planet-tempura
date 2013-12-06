@@ -1,0 +1,6 @@
+- hosts: cron-scheduler
+  user: ec2-user
+  sudo: yes
+  tasks:
+    - yum:
+        name: git
