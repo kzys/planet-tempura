@@ -3,8 +3,6 @@
 from xml.etree import ElementTree
 import sys, re, hashlib
 
-namespaces = { 'atom': 'http://www.w3.org/2005/Atom' }
-
 def dump(content):
   md5 = hashlib.md5()
   md5.update(content)
@@ -13,7 +11,7 @@ def dump(content):
   file.close()
 
 def find_body_nodes(root):
-  return root.findall('./atom:content', namespaces) + root.findall('./atom:summary', namespaces)
+  return root.findall('./{http://www.w3.org/2005/Atom}content') + root.findall('./{http://www.w3.org/2005/Atom}summary')
 
 def has_japanese(content):
   root = ElementTree.fromstring(content)
