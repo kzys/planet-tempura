@@ -10,6 +10,7 @@ development in English.
 Cool. Please add your blog to planet.ini. The process is "as usual",
 open a pull request!
 
-## I sometimes write an article in English, but mainly in Japanese.
+## I don't have an English blog, but sometimes I write articles in English.
 
-It's ok. Japanese articles are automatically excluded from the planet.
+No problem. Please add your blog to planet.ini too. Japanese articles are
+automatically excluded from the planet.
