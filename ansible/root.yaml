@@ -7,6 +7,10 @@
     - yum:
         name: aws-cli
     - yum:
+        name: mailx
+    - yum:
+        name: python27
+    - yum:
         name: "*"
         state: latest
 

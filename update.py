@@ -1,9 +1,9 @@
-#! /usr/bin/python
+#! /usr/bin/python27
 import os, subprocess
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-subprocess.call([ 'python',
+subprocess.call([ 'python27',
                   os.path.join('..', 'venus', 'planet.py'),
                   'planet.ini' ])
 subprocess.call([ 'aws', 's3', 'sync',
