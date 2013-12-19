@@ -1,41 +1,44 @@
+html, .pure-g-r [class*="pure-u"] {
+    xfont-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+}
+
 html {
-    background: #ecf0f1;
+    background: #fff;
     color: #333;
 }
 
+header, #main, footer {
+    max-width: 70em;
+    margin: 0 auto;
+}
+
 header {
-    background: #7f8c8d;
     overflow: hidden;
-    color: #fff;
     padding: 2em 0;
 }
 header h1 {
     margin: 0;
 }
-header a {
-    color: #fff;
-}
 header p {
     margin: 0;
-    font-size: 80%;
+    font-size: 90%;
 }
 
-.container {
-    padding: 0 1em;
+a {
+    color: #03c;
+}
+a:hover {
+    color: #03f;
+}
+a:visited {
+    color: #939;
 }
 
 .day-group {
     margin-bottom: 1em;
 }
 
-.channel-group {
-    background: #fff;
-
-    box-shadow: rgba(0, 0, 0, .15) 0 0 5px;
-
-    padding: 1em;
-    margin-bottom: 1em;
-}
+/* channel == author */
 
 .channel-title {
     font-weight: bold;
@@ -46,13 +49,93 @@ header p {
     text-decoration: none;
 }
 
-.entry-group {
-    border-top: 1px solid #eee;
-    margin-bottom: 1em;
+.channel-group {
+    margin-bottom: 2em;
 }
 
-.date a {
-    color: #333;
-    text-decoration: none;
-    font-size: 80%;
+/* separator between authors */
+.channel-group + .channel-group {
+    margin-top: 1em;
 }
+
+.entry-group {
+    border: 1px solid #000;
+
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
+
+.entry-group h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.entry-group div.content, aside ul, aside p {
+    line-height: 1.5;
+}
+
+.entry-group pre {
+    font-size: 90%;
+}
+
+.entry .date {
+    border-top: 1px solid #000;
+    padding-top: 1em;
+    margin: 1em 0;
+    font-size: 90%;
+}
+
+.entry .date a {
+    text-decoration: none;
+}
+
+header .container {
+    margin: 0 1em 0 5em;
+}
+
+.day-group {
+    position: relative;
+    padding: 0 1em 0 5em;
+}
+
+.day-title {
+    position: absolute;
+    left: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.day-title .day {
+    font-size: 1.8em;
+}
+
+#join {
+    background: #f39c12;
+    padding: 1em;
+    margin-right: 1em;
+    color: white;
+}
+#join a {
+    color: white;
+}
+#join h2 {
+    margin: 0;
+}
+
+/* colors */
+.entry .date {
+    border-color: #bdc3c7;
+}
+.entry .date a, .day-title {
+    color: #bdc3c7;
+}
+.day-group, .channel-group + .channel-group, .entry-group {
+    border-color: #bdc3c7;
+}
+
+/* typography */
+h1, h2.title, aside h2, .day-title, .channel-title {
+    font-family: 'PT Sans Caption', 'Helvetica Neue', 'Ariel', sans-serif;
+    font-weight: 700;
+}
+
