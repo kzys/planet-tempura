@@ -10,7 +10,4 @@
         name: mailx
     - yum:
         name: python27
-    - yum:
-        name: "*"
-        state: latest
 
